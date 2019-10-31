@@ -11,7 +11,7 @@ standard workflow:
 1. Notebook Concept
 2. Notebook Draft
 3. Integrated Notebook
-4. Public/Released Notebook
+4. Final/Public Notebook
 5. Revised based on Community feedback
 6. (Repeat 5 into infinity)
 
@@ -40,7 +40,7 @@ Once they have the concept ready, the author should create a pull request with t
 
 Submission of a new notebook follows the git Pull Request workflow.  This is not described in detail here because more details are in the [STScI git workflow style guide](https://github.com/spacetelescope/style-guides/blob/master/guides/git-workflow.md).  But don't hesitate to reach out for help from other members of the team if you are stuck or aren't sure how it's supposed to work! 
 
-To submit a concept notebook, the author should first fork and clone the notebooks working space repository: https://github.com/spacetelescope/dat_pyinthesky . Then for a add the new notebook in a sub-directory of the ``jdat_notebooks`` directory with the name of the notebook (see the repo itself for examples).  IMPORTANT: for a concept notebook, also be sure to add the name of the notebook to the ``exclude_notebooks`` file, to prevent the tests from running on the notebook (since it isn't intended to be functional yet anyway).  Once you've added the notebook to git, push it up to your fork and create a Pull Request (see the procedures document linked above for more detail).
+To submit a concept notebook, the author should first fork and clone the notebooks working space repository: https://github.com/spacetelescope/dat_pyinthesky . Then for a add the new notebook in a sub-directory of the ``jdat_notebooks`` directory with the name of the notebook (see the repo itself for examples).  Then create the pull request using the name of the notebook as the PR title (including "Draft:"/"Content:"/etc as described below).  IMPORTANT: for a concept notebook, also be sure to add the name of the notebook to the ``exclude_notebooks`` file, to prevent the tests from running on the notebook (since it isn't intended to be functional yet anyway).  Once you've added the notebook to git, push it up to your fork and create a Pull Request (see the procedures document linked above for more detail).
 
 One of the team members can then merge your Pull Request.  For concept notebook, nothing more than a cursory review (ensuring just that the notebook is readable and perhaps asking for clarification in a few areas) is necessary for merging.
 
@@ -97,6 +97,6 @@ Once the notebook authors (original author and developer/reviewer) have agreed i
 
 The final stage for the notebook is release on the [official STScI notebook repository](https://github.com/spacetelescope/notebooks). Specific documentation for this last stage is given in the repository itself.  However, that repository and the working repository here have very similar structure, so it is in principle simply a matter of copying the Integrated Notebook over to a form of the release repository and doing one final Pull Request.  Note, however, that other STScI reviewers may comment on this stage.  It is also important for the authors to do an additional check over the notebook to ensure that it uses *released* (not developer) versions of requirements where possible. It is also a good opportunity to fill in the scientific context of a given notebook - e.g. add a motivation section, or a final plot at the bottom that shows the final science result.  Once this is done, and the Pull Request merged, the Notebook can be declared complete.
 
-## Future Improvements
+## Community-driven Improvements
 
 Of course, science does not stand still!  As time passes some of the completed notebooks may have enhancements or changes necessary.  In general these follow the standard Pull Request workflow and can be submitted by anyone once the notebook is public (both in and out of STScI).  While the repo maintainers manage this process, the notebook authors may be called in from time to time to provide opinions or perspectives on any proposed changes.
